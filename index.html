@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Livraria Elegance</title>
+<meta name="description" content="Descubra histórias atemporais e edições curadas para sua biblioteca pessoal."/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<main>
+  <div class="container">
+
+    <!-- ======================= VIEW: HOME ======================= -->
+    <div data-view="home">
+      <section class="welcome">
+        <h1 class="display-lg text-primary">Bem-vindo, Leitor</h1>
+        <p class="body-md text-muted">Descubra histórias atemporais e edições belíssimas, curadas para sua biblioteca pessoal.</p>
+      </section>
+
+      <section class="section-gap">
+        <a class="featured-card" id="featured-card" style="display:block;">
+          <div class="featured-inner">
+            <div class="featured-media">
+              <img id="featured-img" alt=""/>
+            </div>
+            <div class="featured-body">
+              <div class="featured-meta">
+                <span class="tag">DESTAQUE</span>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.7z"/></svg>
+              </div>
+              <h2 class="headline-md text-primary" id="featured-title"></h2>
+              <p class="author" id="featured-author"></p>
+              <p class="desc body-md" id="featured-desc"></p>
+              <span class="btn btn-primary" style="width:fit-content;">
+                Ver Edição
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <section class="section-gap">
+        <div class="row-head">
+          <h3 class="headline-sm text-primary">Novidades</h3>
+          <a href="#/shop" class="body-sm text-secondary" style="font-weight:700; letter-spacing:.05em; text-transform:uppercase; font-size:12px;">Ver Tudo</a>
+        </div>
+        <div class="scroll-row hide-scrollbar" id="new-arrivals"></div>
+      </section>
+
+      <section class="section-gap">
+        <h2 class="headline-sm text-primary text-center" style="margin-bottom:24px;">Coleções Selecionadas</h2>
+        <div class="collections">
+          <a class="collection-tile" href="#/shop?category=poetry">
+            <img src="https://images.unsplash.com/photo-1471173065544-9145c7f1a2a9?w=800&q=80" alt="Coleção de Poesia"/>
+            <span>Poesia</span>
+          </a>
+          <a class="collection-tile" href="#/shop?category=philosophy">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&q=80" alt="Coleção de Filosofia"/>
+            <span>Filosofia</span>
+          </a>
+          <a class="collection-tile" href="#/shop?category=novels">
+            <img src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?w=800&q=80" alt="Coleção de Clássicos"/>
+            <span>Clássicos</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ======================= VIEW: SHOP ======================= -->
+    <div data-view="shop" hidden>
+      <div class="shop-hero">
+        <span class="label-caps text-secondary">Coleção Selecionada</span>
+        <h1 class="display-lg text-primary">Obras-Primas Literárias</h1>
+        <div class="rule-gold"></div>
+        <p class="body-md">Descubra nossas edições cuidadosamente selecionadas de romances atemporais, poesia evocativa e filosofia fundamental.</p>
+      </div>
+
+      <div class="chip-row hide-scrollbar" id="filters" style="margin-bottom:32px;">
+        <button class="chip active" data-cat="all">Todos</button>
+        <button class="chip" data-cat="novels">Romances</button>
+        <button class="chip" data-cat="poetry">Poesia</button>
+        <button class="chip" data-cat="philosophy">Filosofia</button>
+        <button class="chip" data-cat="accessories">Acessórios</button>
+      </div>
+
+      <div class="book-grid" id="book-grid"></div>
+
+      <div class="center-cta">
+        <a href="#/shop" class="btn btn-outline">Explorar Mais Títulos</a>
+      </div>
+    </div>
+
+    <!-- ======================= VIEW: PRODUCT ======================= -->
+    <div data-view="product" hidden>
+      <div class="product-layout">
+        <div class="product-hero">
+          <img id="product-img" alt=""/>
+        </div>
+
+        <div class="product-info">
+          <div class="product-title-block">
+            <h1 class="display-lg text-primary" id="product-title"></h1>
+            <p class="author" id="product-author"></p>
+          </div>
+
+          <div class="product-actions">
+            <div class="product-price" id="product-price"></div>
+            <button class="btn btn-gold" id="add-to-cart-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 13H5z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+              Adicionar ao Carrinho
+            </button>
+            <div class="tag-row" id="product-tags"></div>
+          </div>
+
+          <div class="product-description">
+            <div class="rule-gold"></div>
+            <p class="body-md" id="product-desc" style="text-align:center;"></p>
+          </div>
+        </div>
+      </div>
+
+      <section class="section-gap">
+        <div class="section-title-line">
+          <div class="rule"></div>
+          <h2 class="headline-sm text-primary">Selecionado Para Você</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="cross-sell" id="cross-sell"></div>
+      </section>
+    </div>
+
+    <!-- ======================= VIEW: CART ======================= -->
+    <div data-view="cart" hidden style="max-width:760px; margin:0 auto;">
+      <div class="cart-head">
+        <h1 class="display-lg text-primary" id="cart-heading">Sua Sacola</h1>
+        <p id="cart-subheading">Carregando...</p>
+      </div>
+      <div id="cart-content"></div>
+    </div>
+
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
