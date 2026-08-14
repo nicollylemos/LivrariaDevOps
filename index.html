@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Livraria Elegance</title>
-<meta name="description" content="Descubra histórias atemporais e edições curadas para sua biblioteca pessoal."/>
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Livraria Elegance</title>
+  <meta name="description" content="Descubra histórias atemporais e edições curadas para sua biblioteca pessoal."/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
@@ -141,8 +141,45 @@
       <div id="cart-content"></div>
     </div>
 
+    <!-- ======================= VIEW: MEUS LIVROS ======================= -->
+    <div data-view="my-books" hidden style="max-width:960px; margin:0 auto;">
+      <div class="shop-hero">
+        <span class="label-caps text-secondary">Biblioteca Pessoal</span>
+        <h1 class="display-lg text-primary">Meus Livros</h1>
+        <div class="rule-gold"></div>
+        <p class="body-md">Acesse suas edições adquiridas, retome a leitura e consulte suas marcações.</p>
+      </div>
+      <div id="my-books-content"></div>
+    </div>
+
+    <!-- ======================= VIEW: DETALHES DO LIVRO ADQUIRIDO ======================= -->
+    <div data-view="book-detail" hidden style="max-width:880px; margin:0 auto;">
+      <div id="book-detail-content"></div>
+    </div>
+
+    <!-- ======================= VIEW: LEITOR COMPLETO EM TELA ======================= -->
+    <div data-view="reader" hidden class="full-reader-container">
+      <div id="reader-page-content"></div>
+    </div>
+
+    <!-- ======================= VIEW: MARCAÇÕES DO LIVRO ======================= -->
+    <div data-view="book-annotations" hidden style="max-width:840px; margin:0 auto;">
+      <div id="book-annotations-content"></div>
+    </div>
+
+    <!-- ======================= VIEW: PROFILE ======================= -->
+    <div data-view="profile" hidden style="max-width:840px; margin:0 auto;">
+      <div id="profile-content"></div>
+    </div>
+
   </div>
 </main>
+
+<!-- Botão Flutuante de Adicionar Citação ao Selecionar Texto -->
+<button id="floating-quote-btn" class="floating-quote-btn" style="display:none;">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+  Adicionar Citação
+</button>
 
 <script src="script.js"></script>
 </body>
