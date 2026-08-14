@@ -44,7 +44,7 @@ Monograma minimalista com o contorno de um livro em estilo *line art* dourado, p
 ## 3. Arquitetura de Telas e Funcionalidades
 
 ### 3.1 Início (Home)
-- **Banner de destaque:** Apresentação da principal obra em evidência com capa, sinopse poética e acesso rápido aos detalhes[cite: 1].
+- **Banner de destaque:** Apresentação da principal obra em evidência com capa, sinopse poética e acesso rápido aos detalhes.
 - **Novidades:** Carrossel com rolagem horizontal contendo os lançamentos recentes[cite: 1].
 - **Coleções Curadas:** Blocos visuais temáticos que segmentam o acervo em Romances/Clássicos, Poesia e Filosofia[cite: 1].
 
